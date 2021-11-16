@@ -1,0 +1,4703 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Tag: @smoke</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>demo</td>
+      <td>11 Nov 2021, 19:30</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@smoke</td>
+          <td      class="passed"    >107</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">107</td>
+
+          <td  class="passed"    >9</td>
+          <td >0</td>
+          <td class="total">9</td>
+
+          <td class="duration" data-value="24776329200">24.776</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">2.995</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Create a new board from api response</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Kurtis Weissnat'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">1.022</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.951</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>19:30:24.756 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 69
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Kurtis Weissnat&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:25.661 response time in milliseconds: 902
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 99
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14999
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 299
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 374
+1 &lt; X-Server-Time: 1636677026083
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:26 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 161
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: b5efa7c7a6932523
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a29669660931483669&quot;,&quot;name&quot;:&quot;Kurtis Weissnat&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/h6c3ghrW/kurtis-weissnat&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/h6c3ghrW&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">0.997</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>19:30:25.671 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a29669660931483669?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:26.667 response time in milliseconds: 996
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 94
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14992
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 294
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 364
+2 &lt; X-Server-Time: 1636677027099
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:27 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 368
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: ae4cc805df72c8b7
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">3.264</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Create a new board from api response</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Nicholas Runolfsdottir V'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">1.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.968</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>19:30:24.756 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 78
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Nicholas Runolfsdottir V&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:25.676 response time in milliseconds: 920
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 97
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14997
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 297
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 372
+1 &lt; X-Server-Time: 1636677026109
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:26 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 189
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: edc335075fc8f9a6
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a2d8b68b5da82a38c3&quot;,&quot;name&quot;:&quot;Nicholas Runolfsdottir V&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/mEJWsJJg/nicholas-runolfsdottir-v&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/mEJWsJJg&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.279</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>19:30:25.682 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a2d8b68b5da82a38c3?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:26.959 response time in milliseconds: 1276
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 92
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14990
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 292
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 362
+2 &lt; X-Server-Time: 1636677027384
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:27 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 628
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: de4915ea9eddb48e
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">3.280</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Create a new board from api response</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Glenna Reichert'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">1.022</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>19:30:24.692 attach - immutable map: address
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.976</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>19:30:24.756 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 69
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Glenna Reichert&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:25.688 response time in milliseconds: 931
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 96
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14996
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 296
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 371
+1 &lt; X-Server-Time: 1636677026118
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:26 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 192
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: ea3e23e6c30e1546
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a265061e84338b77f6&quot;,&quot;name&quot;:&quot;Glenna Reichert&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/VRm6VF5i/glenna-reichert&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/VRm6VF5i&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.260</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>19:30:25.693 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a265061e84338b77f6?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:26.951 response time in milliseconds: 1258
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 91
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14990
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 291
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 361
+2 &lt; X-Server-Time: 1636677027385
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:27 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 638
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: 8b5b536a325d10f3
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">2.980</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Create a new board from api response</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-14" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-15" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Clementina DuBuque'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.999</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>19:30:24.689 attach - immutable map: __row
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.968</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>19:30:24.756 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 72
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Clementina DuBuque&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:25.674 response time in milliseconds: 918
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 98
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14998
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 298
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 373
+1 &lt; X-Server-Time: 1636677026108
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:26 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 188
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: a1013c93c9af19ea
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a2829d392dbbcd08a9&quot;,&quot;name&quot;:&quot;Clementina DuBuque&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/N3eg04D2/clementina-dubuque&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/N3eg04D2&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>19:30:25.682 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a2829d392dbbcd08a9?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:26.678 response time in milliseconds: 996
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 93
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14991
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 293
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 363
+2 &lt; X-Server-Time: 1636677027108
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:27 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 373
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: 6d7a572b1a46edb3
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">3.498</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-19">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">create a new board from json data</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-19" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-20" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Leanne Graham'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.865</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.851</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details">
+        <pre>19:30:24.893 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 67
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Leanne Graham&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:25.742 response time in milliseconds: 849
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 95
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14995
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 295
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 370
+1 &lt; X-Server-Time: 1636677026175
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:26 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 214
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: 25d6507f565f380e
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a29d0ad78429e5fc29&quot;,&quot;name&quot;:&quot;Leanne Graham&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/OLSGufZB/leanne-graham&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/OLSGufZB&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.777</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>19:30:25.749 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a29d0ad78429e5fc29?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:27.523 response time in milliseconds: 1773
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14995
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 90
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 290
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 357
+2 &lt; X-Server-Time: 1636677027945
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:27 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 388
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: f00d0423664fd3b4
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">3.096</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">create a new board from json data</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-23" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-24">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-24" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Ervin Howell'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.982</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.973</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>19:30:26.775 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 66
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Ervin Howell&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:27.746 response time in milliseconds: 971
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 88
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14995
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 288
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 354
+1 &lt; X-Server-Time: 1636677028178
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:28 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 355
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: 3dd0f6f845f27752
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a4dec5e93d3951c493&quot;,&quot;name&quot;:&quot;Ervin Howell&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/7X0rKIYH/ervin-howell&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/7X0rKIYH&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.136</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-26" class="collapse collapsable-details">
+        <pre>19:30:27.751 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a4dec5e93d3951c493?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:28.886 response time in milliseconds: 1135
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 84
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14994
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 284
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 348
+2 &lt; X-Server-Time: 1636677029320
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:29 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 523
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: 80f3e4abdc67f05c
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1920236911.html">trello/boards/boards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">2.652</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-27">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">create a new board from json data</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-27" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-28">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-28" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">requestVar.name = 'Clementine Bauch'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.824</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.815</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-29">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details">
+        <pre>19:30:26.806 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Accept-language: es
+1 &gt; transaction-id: 12321121432wgefgfgfgfd
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 70
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Clementine Bauch&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:27.619 response time in milliseconds: 813
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 89
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14996
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 289
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 356
+1 &lt; X-Server-Time: 1636677028045
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:28 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 167
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: 318333a967169962
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a3a8293889f388c0a8&quot;,&quot;name&quot;:&quot;Clementine Bauch&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/VIVasqyy/clementine-bauch&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/VIVasqyy&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '1','boards',boardId</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method delete</span>
+
+  <span class="lead-duration duration">1.009</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>19:30:27.623 request:
+2 &gt; DELETE https://api.trello.com/1/boards/618db5a3a8293889f388c0a8?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+2 &gt; Accept-language: es
+2 &gt; transaction-id: 12321121432wgefgfgfgfd
+2 &gt; Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U
+2 &gt; Host: api.trello.com
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:28.630 response time in milliseconds: 1007
+2 &lt; 200
+2 &lt; X-Dns-Prefetch-Control: off
+2 &lt; X-Frame-Options: DENY
+2 &lt; X-Download-Options: noopen
+2 &lt; X-Permitted-Cross-Domain-Policies: none
+2 &lt; Referrer-Policy: strict-origin-when-cross-origin
+2 &lt; Surrogate-Control: no-store
+2 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+2 &lt; Pragma: no-cache
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+2 &lt; X-Trello-Version: 1.97361.0
+2 &lt; X-Trello-Environment: Production
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+2 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+2 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+2 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+2 &lt; X-Rate-Limit-Action-Max: 15000
+2 &lt; X-Rate-Limit-Action-Remaining: 14994
+2 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Token-Max: 100
+2 &lt; X-Rate-Limit-Api-Token-Remaining: 85
+2 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Api-Key-Max: 300
+2 &lt; X-Rate-Limit-Api-Key-Remaining: 285
+2 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+2 &lt; X-Rate-Limit-Member-Max: 375
+2 &lt; X-Rate-Limit-Member-Remaining: 349
+2 &lt; X-Server-Time: 1636677029065
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Date: Fri, 12 Nov 2021 00:30:29 GMT
+2 &lt; X-Envoy-Upstream-Service-Time: 384
+2 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+2 &lt; Strict-Transport-Security: max-age=63072000; preload
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-Xss-Protection: 1; mode=block
+2 &lt; Atl-Traceid: b047d970765d4ee9
+2 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+2 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+2 &lt; Server: globaledge-envoy
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;_value&quot;:null}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_2036704535.html">trello/cards/cards.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">1.613</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create a card</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-32">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.810</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.802</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>19:30:26.972 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 75
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;CreateFromKarateSmoke&quot;,&quot;defaultLabels&quot;:false,&quot;defaultLists&quot;:false}
+
+19:30:27.772 response time in milliseconds: 800
+1 &lt; 200
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: max-age=0, must-revalidate, no-cache, no-store
+1 &lt; Pragma: no-cache
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 86
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14993
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 286
+1 &lt; X-Rate-Limit-Member-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Member-Max: 375
+1 &lt; X-Rate-Limit-Member-Remaining: 353
+1 &lt; X-Server-Time: 1636677028205
+1 &lt; X-Trello-Api-Org-Selected: true
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 12 Nov 2021 00:30:28 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 175
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: 1fa3e00c7583b802
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Set-Cookie: preAuthProps=s%3A5bc6b8ae3b95c8743c81cb8b%3AisEnterpriseAdmin%3Dfalse.pxZ9vHjJ4zTAz72EaSqZA81L4uGY1qxgeTeQaAHGv1U; Domain=api.trello.com
+{&quot;id&quot;:&quot;618db5a41642d545cd25060d&quot;,&quot;name&quot;:&quot;CreateFromKarateSmoke&quot;,&quot;desc&quot;:&quot;&quot;,&quot;descData&quot;:null,&quot;closed&quot;:false,&quot;idOrganization&quot;:&quot;60d516e393afe75a7add4627&quot;,&quot;idEnterprise&quot;:null,&quot;pinned&quot;:false,&quot;url&quot;:&quot;https://trello.com/b/2cvEgblO/createfromkaratesmoke&quot;,&quot;shortUrl&quot;:&quot;https://trello.com/b/2cvEgblO&quot;,&quot;prefs&quot;:{&quot;permissionLevel&quot;:&quot;private&quot;,&quot;hideVotes&quot;:false,&quot;voting&quot;:&quot;disabled&quot;,&quot;comments&quot;:&quot;members&quot;,&quot;invitations&quot;:&quot;members&quot;,&quot;selfJoin&quot;:true,&quot;cardCovers&quot;:true,&quot;isTemplate&quot;:false,&quot;cardAging&quot;:&quot;regular&quot;,&quot;calendarFeedEnabled&quot;:false,&quot;isPluginHeaderShortcutsEnabled&quot;:false,&quot;enabledPluginBoardButtons&quot;:[],&quot;background&quot;:&quot;blue&quot;,&quot;backgroundImage&quot;:null,&quot;backgroundImageScaled&quot;:null,&quot;backgroundTile&quot;:false,&quot;backgroundBrightness&quot;:&quot;dark&quot;,&quot;backgroundColor&quot;:&quot;#0079BF&quot;,&quot;backgroundBottomColor&quot;:&quot;#0079BF&quot;,&quot;backgroundTopColor&quot;:&quot;#0079BF&quot;,&quot;canBePublic&quot;:true,&quot;canBeEnterprise&quot;:true,&quot;canBeOrg&quot;:true,&quot;canBePrivate&quot;:true,&quot;canInvite&quot;:true},&quot;labelNames&quot;:{&quot;green&quot;:&quot;&quot;,&quot;yellow&quot;:&quot;&quot;,&quot;orange&quot;:&quot;&quot;,&quot;red&quot;:&quot;&quot;,&quot;purple&quot;:&quot;&quot;,&quot;blue&quot;:&quot;&quot;,&quot;sky&quot;:&quot;&quot;,&quot;lime&quot;:&quot;&quot;,&quot;pink&quot;:&quot;&quot;,&quot;black&quot;:&quot;&quot;},&quot;limits&quot;:{}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2_3160280059.html">trello/lists/lists.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
+</div>
+
+
+  <span class="lead-duration duration">1.395</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-34">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create a card</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-34" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-35">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-35" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardResponse = call read('classpath:some-reusable.feature@createBoard')</span>
+
+  <span class="lead-duration duration">0.700</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">some-reusable.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url _url</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path '1','boards'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">params {key:#(_key), token:#(_token)}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request requestVar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.693</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-36">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-36" class="collapse collapsable-details">
+        <pre>19:30:26.978 request:
+1 &gt; POST https://api.trello.com/1/boards?key=38e7987a4fa0c6195e8c27df9d27c099&amp;token=25c156a6489e519ab5e799bfbf14601721a4438835ea2c1efbb9cca7c4248ad3
+1 &gt; Host: api.trello.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:30:27.671 response time in milliseconds: 692
+1 &lt; 400
+1 &lt; X-Dns-Prefetch-Control: off
+1 &lt; X-Frame-Options: DENY
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Surrogate-Control: no-store
+1 &lt; Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Trello-Version: 1.97361.0
+1 &lt; X-Trello-Environment: Production
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, PUT, POST, DELETE
+1 &lt; Access-Control-Allow-Headers: Authorization, Accept, Content-Type
+1 &lt; Access-Control-Expose-Headers: x-rate-limit-api-key-interval-ms, x-rate-limit-api-key-max, x-rate-limit-api-key-remaining, x-rate-limit-api-token-interval-ms, x-rate-limit-api-token-max, x-rate-limit-api-token-remaining
+1 &lt; X-Rate-Limit-Api-Token-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Token-Max: 100
+1 &lt; X-Rate-Limit-Api-Token-Remaining: 87
+1 &lt; X-Rate-Limit-Action-Interval-Ms: 3600000
+1 &lt; X-Rate-Limit-Action-Max: 15000
+1 &lt; X-Rate-Limit-Action-Remaining: 14994
+1 &lt; X-Rate-Limit-Api-Key-Interval-Ms: 10000
+1 &lt; X-Rate-Limit-Api-Key-Max: 300
+1 &lt; X-Rate-Limit-Api-Key-Remaining: 287
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 22
+1 &lt; Date: Fri, 12 Nov 2021 00:30:28 GMT
+1 &lt; X-Envoy-Upstream-Service-Time: 73
+1 &lt; Expect-Ct: report-uri=&quot;https://web-security-reports.services.atlassian.com/expect-ct-report/trello-edge&quot;, max-age=86400
+1 &lt; Strict-Transport-Security: max-age=63072000; preload
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Xss-Protection: 1; mode=block
+1 &lt; Atl-Traceid: e818582f5c23340a
+1 &lt; Report-To: {&quot;group&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;endpoints&quot;: [{&quot;url&quot;: &quot;https://dj9s4kmieytgz.cloudfront.net&quot;}], &quot;include_subdomains&quot;: true}
+1 &lt; Nel: {&quot;report_to&quot;: &quot;endpoint-1&quot;, &quot;max_age&quot;: 600, &quot;include_subdomains&quot;: true, &quot;failure_fraction&quot;: 0.001}
+1 &lt; Server: globaledge-envoy
+invalid value for name
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def boardId = boardResponse.response.id</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

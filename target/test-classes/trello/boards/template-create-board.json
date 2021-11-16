@@ -1,0 +1,15 @@
+{
+  "id":"#string",
+  "desc":"#string",
+  "descData":"##null",
+  "closed":"#boolean",
+  "idOrganization":"#string",
+  "idEnterprise":"#null",
+  "pinned":"#boolean",
+  "url":"#string",
+  "shortUrl":"#string",
+  "prefs":"#object",
+  "labelNames":"#object",
+  "limits":"#object",
+  "danilo":"#notpresent"
+}

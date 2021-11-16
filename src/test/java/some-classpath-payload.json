@@ -1,0 +1,18 @@
+[
+  {
+    "scenario": "smoke",
+    "requestCreateBoard": {
+      "name": "CreateFromKarateSmoke",
+      "defaultLabels":false,
+      "defaultLists": false
+    }
+  },
+  {
+    "scenario": "regression",
+    "requestCreateBoard": {
+      "name": "CreateFromKarateRegression",
+      "defaultLabels":true,
+      "defaultLists": true
+    }
+  }
+]
